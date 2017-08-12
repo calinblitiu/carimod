@@ -1,0 +1,31 @@
+meta: {  }
+head_bottom: ''
+atoms:
+  -
+    type: icon-fonts
+    title: 'Icon Fonts'
+    attributes:
+      enabled: '1'
+      load:
+        octicons: '0'
+        strokeicon7: '0'
+        ionicons: '0'
+        themify: '1'
+        typicons: '0'
+  -
+    type: uikit
+    title: 'UIkit for Gantry5'
+    attributes:
+      enabled: '1'
+      jslocation: footer
+  -
+    type: template-js
+    title: Template.js
+    attributes:
+      enabled: '1'
+  -
+    type: scrollreveal-js
+    title: ScrollReveal.js
+    attributes:
+      enabled: '1'
+      mobile: 'false'

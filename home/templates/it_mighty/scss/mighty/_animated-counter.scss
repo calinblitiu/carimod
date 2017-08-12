@@ -1,0 +1,64 @@
+.g-animated-counter {
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
+	text-align: center;
+	.g-content {
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.g-animated-counter-item {
+		@include breakpoint(mobile-only) {
+			margin-bottom: ($content-margin + $content-padding)*2;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	p {
+		margin: 0;
+	}
+	.g-animated-counter-number {
+		font-size: 280%;
+		margin-bottom: 0;
+		margin-top: -5px;
+	}
+	.g-animated-counter-title {
+		margin-bottom: 0;
+		font-size: 140%;
+		margin-top: -5px;
+	}
+	.g-animated-counter-icon {
+		border-radius: 50%;
+		font-size: 2.2rem;
+		height: 110px;
+		width: 110px;
+		line-height: 110px;
+		border: 2px solid;
+		border-color: inherit;
+		text-align: center;
+		vertical-align: middle;
+		margin-bottom: 35px;
+		display: inline-block;
+		@include transition(all 0.2s linear 0s);
+	}
+	&.style2 {
+		text-align: initial;
+		.g-animated-counter-icon {
+			color: $white;
+			font-size: 1.5rem;
+			height: 75px;
+			width: 75px;
+			line-height: 75px;
+			background: $accent-color-1;
+			@include linear-gradient(to bottom, $accent-color-1, $accent-color-2);
+			border: 0px solid;
+			border-color: transparent;
+			margin-top: 0.7rem;
+			margin-bottom: 0px;
+			margin-right: 1rem;
+			display: inline-block;
+			float: left;
+		}
+	}
+}

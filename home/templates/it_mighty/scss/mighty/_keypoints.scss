@@ -1,0 +1,81 @@
+.g-keypoints {
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
+	.g-left-points {
+		.g-content {
+			margin: 0 $content-margin 0 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			text-align: right;
+			.g-keypoints-item-icon {
+				margin-left: 1.25rem;
+				color: $white;
+				background: $accent-color-1;
+				line-height: 2.5rem;
+				border-radius: 100%;
+				width: 2.5rem;
+				height: 2.5rem;
+				text-align: center;
+			}
+			@include breakpoint(mobile-only) {
+				text-align: center;
+			}
+		}
+		.g-keypoints-item {
+			&:last-child {
+				@include breakpoint(mobile-only) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+	
+	.g-main-image {
+		text-align: center;
+		.g-content {
+			margin: 0;
+			padding: 0;
+			@include breakpoint(mobile-only) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+	.image-bottom {
+		margin-bottom: -($content-margin + $content-padding + $section-padding);
+		@include breakpoint(mobile-only) {
+			margin-bottom: 1rem;
+		}
+	}
+	
+	.g-right-points {
+		.g-content {
+			margin: 0 0 0 $content-margin;
+			padding-top: 0;
+			padding-bottom: 0;
+			.g-keypoints-item-icon {
+				margin-right: 1.25rem;
+				color: $white;
+				background: $accent-color-1;
+				line-height: 2.5rem;
+				border-radius: 100%;
+				width: 2.5rem;
+				height: 2.5rem;
+				text-align: center;
+			}
+			@include breakpoint(mobile-only) {
+				text-align: center;
+			}
+		}
+	}
+
+	.g-keypoints-item {
+		.g-keypoints-item-desc {
+			margin: 1.5rem 0;
+		}
+		&:last-child {
+			.g-keypoints-item-desc {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

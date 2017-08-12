@@ -1,0 +1,74 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set attr_extra = '' %}
+{% if particle.extra %}
+    {% for attributes in particle.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% set particleheading %}
+	<div class="g-particle-intro">
+		{% if particle.mainheading %}
+			<h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+			<div class="g-title-separator {% if particle.introtext == false %}no-intro-text{% endif %}"></div>
+		{% endif %}	
+		{% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+	</div>
+{% endset %}
+
+{% block particle %}
+
+	<div class="g-keypoints{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+		{% if particle.mainheading or particle.introtext %}
+			{{ particleheading }}
+		{% endif %}
+		<div class="g-grid">
+			<div class="g-block g-left-points">
+				<div class="g-content">
+					<div class="g-grid">
+						<div class="g-block">
+							{% for item in particle.itemsleft %}
+								{% set attr_extra_item = '' %}
+								{% for extra in item.extra %}
+									{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+								{% endfor %}
+								<div class="g-keypoints-item{% if item.class %} {{ item.class|e }}{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+									{% if item.title %}<h4 class="g-keypoints-item-title">{% if item.link %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">{% endif %}{{ item.title|raw }}{% if item.icon %}<span class="g-keypoints-item-icon {{ item.icon|e }}"></span>{% endif %}{% if item.link %}</a>{% endif %}</h4>{% endif %}
+									{% if item.description %}<div class="g-keypoints-item-desc">{{ item.description|raw }}</div>{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>					
+				</div>
+			</div>
+			
+			<div class="g-block g-main-image">
+				<div class="g-content">
+					{% if particle.image %}<img class="g-keypoints-image{% if particle.imagebottom|default('yes')|e == 'yes' %} image-bottom{% endif %}" alt="{{ particle.alt|e }}" src="{{ url(particle.image) }}" {{ particle.image|imagesize|raw }}>{% endif %}
+				</div>			
+			</div>
+			
+			<div class="g-block g-right-points">
+				<div class="g-content">
+					<div class="g-grid">
+						<div class="g-block">
+							{% for item in particle.itemsright %}
+								{% set attr_extra_item = '' %}
+								{% for extra in item.extra %}
+									{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+								{% endfor %}
+								<div class="g-keypoints-item{% if item.class %} {{ item.class|e }}{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+									{% if item.title %}<h4 class="g-keypoints-item-title">{% if item.link %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">{% endif %}{% if item.icon %}<span class="g-keypoints-item-icon {{ item.icon|e }}"></span>{% endif %}{{ item.title|raw }}{% if item.link %}</a>{% endif %}</h4>{% endif %}
+									{% if item.description %}<div class="g-keypoints-item-desc">{{ item.description|raw }}</div>{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

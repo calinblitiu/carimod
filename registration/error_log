@@ -1,0 +1,21 @@
+[06-Jan-2017 17:07:36 America/Chicago] PHP Warning:  include(_main.header.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 112
+[06-Jan-2017 17:07:36 America/Chicago] PHP Warning:  include(_main.header.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 112
+[06-Jan-2017 17:07:36 America/Chicago] PHP Warning:  include(): Failed opening '_main.header.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home3/menmwen/public_html/registration/login.php on line 112
+[06-Jan-2017 17:07:36 America/Chicago] PHP Warning:  include(_main.footer.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 221
+[06-Jan-2017 17:07:36 America/Chicago] PHP Warning:  include(_main.footer.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 221
+[06-Jan-2017 17:07:36 America/Chicago] PHP Warning:  include(): Failed opening '_main.footer.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home3/menmwen/public_html/registration/login.php on line 221
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(dbase.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 9
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(dbase.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 9
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(): Failed opening 'dbase.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home3/menmwen/public_html/registration/login.php on line 9
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(settings.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 11
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(settings.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 11
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(): Failed opening 'settings.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home3/menmwen/public_html/registration/login.php on line 11
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'menmwen'@'localhost' (using password: NO) in /home3/menmwen/public_html/registration/login.php on line 41
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/menmwen/public_html/registration/login.php on line 41
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/menmwen/public_html/registration/login.php on line 43
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(_main.header.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 112
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(_main.header.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 112
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(): Failed opening '_main.header.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home3/menmwen/public_html/registration/login.php on line 112
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(_main.footer.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 221
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(_main.footer.php): failed to open stream: No such file or directory in /home3/menmwen/public_html/registration/login.php on line 221
+[06-Jan-2017 17:07:55 America/Chicago] PHP Warning:  include(): Failed opening '_main.footer.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home3/menmwen/public_html/registration/login.php on line 221

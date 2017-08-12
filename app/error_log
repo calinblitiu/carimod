@@ -1,0 +1,7 @@
+[13-Feb-2017 15:59:48 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home3/menmwen/public_html/app/application/DB_Connect.php:23
+Stack trace:
+#0 /home3/menmwen/public_html/app/application/DB_Connect.php(23): PDO->__construct('mysql:host=loca...', 'root', 'root')
+#1 /home3/menmwen/public_html/app/controllers/ControllerAuthentication.php(14): DB_Connect->connect()
+#2 /home3/menmwen/public_html/app/index.php(4): ControllerAuthentication->__construct()
+#3 {main}
+  thrown in /home3/menmwen/public_html/app/application/DB_Connect.php on line 23

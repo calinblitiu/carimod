@@ -1,0 +1,54 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set attr_extra = '' %}
+{% if particle.extra %}
+    {% for attributes in particle.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% set particleheading %}
+	<div class="g-particle-intro">
+		{% if particle.mainheading %}
+			<h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+			<div class="g-title-separator {% if particle.introtext == false %}no-intro-text{% endif %}"></div>
+		{% endif %}	
+		{% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+	</div>
+{% endset %}
+
+{% block particle %}
+
+	<div class="g-buttons{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+		{% if particle.mainheading or particle.introtext %}
+			{{ particleheading }}
+		{% endif %}
+
+		<div class="g-grid">
+	        {% for item in particle.itemsbuttons %}
+			{% set attr_extra_item = '' %}
+			{% for extra in item.extra %}
+				{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+			{% endfor %}
+			<div class="g-block">
+				{% if item.link %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">{% endif %}
+				<div class="g-content g-buttons-item{% if item.class %} {{ item.class|e }}{% endif %}{% if item.invertbutton %} inverted-button{% endif %} {% if particle.fixedbuttonwidth|default('yes')|e == 'yes' %} fixed-button{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+					<div class="g-grid">
+						<div class="g-block size-20">
+							{% if item.icon %}<span class="g-buttons-item-icon {{ item.icon|e }}"></span>{% endif %}
+						</div>
+						<div class="g-block size-80">
+							{% if item.title1 %}<p class="g-buttons-item-title1">{{ item.title1|e }}</p>{% endif %}
+							{% if item.title2 %}<h3 class="g-buttons-item-title2">{{ item.title2|e }}</h3>{% endif %}
+						</div>
+					</div>
+				</div>
+				{% if item.link %}</a>{% endif %}
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

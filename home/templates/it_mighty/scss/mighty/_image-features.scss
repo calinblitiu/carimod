@@ -1,0 +1,125 @@
+// Set the variable defaults in case they are missing in the template
+$base-title-color: #4d4d4d !default;
+
+.g-image-features {
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
+	.g-grid {
+		margin-bottom: $content-padding*2;
+		&:last-child {
+			margin-bottom: 0;
+			.g-block {
+				&:last-child {
+					.g-image-features-item {
+						@include breakpoint(mobile-only) {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+		@include breakpoint(mobile-only) {
+
+			margin-bottom: 0;
+		}
+	}
+	> .g-grid {
+		> .g-block {
+			@include breakpoint(tablet-range) {
+				@include flex(0 100%);
+				margin-bottom: $content-padding*2;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.g-content {
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.g-image-features-item {
+		background: #ffffff;
+		border: 1px solid lighten($base-border-color, 2%);
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.07);
+		border-radius: 3px;
+		@include breakpoint(mobile-only) {
+			margin-bottom: ($content-margin + $content-padding)*1.5;
+		}
+	}
+	.g-image-features-image {
+		position: relative;
+		img {
+			width: 100%;
+			border-radius: 3px 0 0 3px;
+		}
+		.uk-overlay-icon {
+			&:before {
+				content: "\f0c1";
+			}
+		}
+		&.uk-overlay {
+			border-radius: 3px 0 0 3px;
+			img {
+				@include transition(all 0.3s);
+			}
+		}
+		&:hover {
+			&.uk-overlay {
+				img {
+					@include transform(scale(1.15));
+				}
+			}
+		}
+		.uk-overlay-panel {
+			z-index: 4;
+		}
+	}
+	.g-image-features-content {
+		padding: 20px;
+	}
+	p {
+		margin: 0;
+	}
+	.g-image-features-title {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		a {
+			color: $base-title-color;
+			&:hover {
+				color: $accent-color-1;
+			}
+		}
+	}
+	.g-bottom-info {
+		margin-top: 15px;
+	}
+	.g-image-feature-special {
+		color: lighten($base-text-color, 20%);
+		font-style: italic;
+		float: left;
+		@include breakpoint(small-mobile-range) {
+			float: none;
+		}
+		i {
+			margin-right: 5px;
+		}
+	}
+	.g-image-features-link {
+		font-style: italic;
+		float: right;
+		@include breakpoint(small-mobile-range) {
+			float: none;
+			margin-top: 5px;
+		}
+		i {
+			margin-left: 10px;
+		}
+	}
+	.no-special {
+		.g-image-features-link {
+			float: none;
+		}
+	}
+}

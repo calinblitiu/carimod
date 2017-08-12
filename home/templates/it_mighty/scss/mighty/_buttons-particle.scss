@@ -1,0 +1,136 @@
+.g-buttons {
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
+		
+	.g-buttons-item {
+		color: $base-text-color;
+		margin: 0 auto;
+		display: table;
+		background: transparent;
+		padding: 1.5rem 2rem;
+		border-radius: 3px;
+		border: 1px solid $base-text-color;
+		@include transition(all 0.2s);
+		@include breakpoint(tablet-range) {
+			width: 70%;
+		}
+		@include breakpoint(mobile-only) {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+		
+		a {
+			color: inherit;
+		}
+			
+		.g-block {
+			text-align: center;
+			display: table-cell;
+			vertical-align: middle;
+			
+			p {
+				margin: 0px;
+				line-height: 1.2rem;
+			}
+			.g-buttons-item-icon {
+				color: $accent-color-1;
+				font-size: 3rem;
+				margin-right: 1rem;
+				text-align: center;
+				@include transition(all 0.2s);
+				@include breakpoint(tablet-range) {
+					font-size: 2rem;
+				}
+				@include breakpoint(mobile-only) {
+					font-size: 2rem;
+				}
+			}
+			.g-buttons-item-title1 {
+				text-align: initial;
+				text-transform: uppercase;
+				font-weight: bold;
+				@include transition(all 0.2s);
+			}
+			.g-buttons-item-title2 {
+				text-align: initial;
+				font-size: 2rem;
+				line-height: 2rem;
+				margin: 0px;
+				@include transition(all 0.2s);
+			}
+			h3 {
+				color: $accent-color-1 !important;
+			}
+		}
+		
+		&:hover {
+			color: $white;
+			background: $accent-color-1;
+			border: 1px solid $accent-color-1;
+			
+			.g-buttons-item-icon {
+				color: $white;
+			}
+			
+			h3{
+				color: $white !important;
+			}
+		}
+		
+		&.inverted-button {
+			color: $white;
+			background: $accent-color-1;
+			border: 1px solid $accent-color-1;
+			
+			a {
+				color: $white;
+			}
+			.g-block {
+				.g-buttons-item-icon {
+					color: $white;
+				}
+				h3 {
+					color: $white !important;
+				}
+			}
+			&:hover {
+				background: darken($accent-color-1, 10%);
+			}
+		}
+	
+	}
+	.fixed-button {
+		width: 320px;
+		@include breakpoint(desktop-range) {
+			width: 300px;
+			.g-block {
+				.g-buttons-item-title2 {
+					font-size: 1.7rem;
+				}
+			}
+		}
+	}
+	.g-grid {
+		@include breakpoint(tablet-range) {
+			display: block !important;
+			.g-block {
+				margin-bottom: 1rem;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+		}
+		@include breakpoint(mobile-only) {
+			display: table;
+			width: 100%;
+		}
+	}
+    > .g-grid {
+        > .g-block {
+            text-align: center;
+            > a {
+                display: inline-block;
+            }
+        }
+    }
+}

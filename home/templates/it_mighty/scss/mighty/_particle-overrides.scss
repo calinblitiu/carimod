@@ -1,0 +1,536 @@
+// Override for Particles Title and Introtext that comes from "UIkit for Gantry5" atom
+body {
+	.g-particle-intro {
+		margin-bottom: 3rem;
+		text-align: center;
+		.g-particle-intro {
+			margin-bottom: 3rem;
+		}
+		.g-main-title {
+			margin-bottom: 0;
+		}
+		.g-title-separator {
+			height: 10px !important;
+			width: 75px !important;
+			border-radius: 25px;
+			margin: 20px auto;
+			background: rgba(0,0,0,0.1) !important;
+			&.no-intro-text {
+				margin: 2.5rem auto 0;
+			}
+		}
+	}
+}
+
+// Override for default particle styling
+body {
+	.g-keypoints {
+		.g-left-points,
+		.g-right-points {
+			.g-content {
+				.g-keypoints-item-icon {
+					background: $accent-color-1;
+					@include linear-gradient(to bottom, $accent-color-1, $accent-color-2);
+					line-height: 3.5rem;
+					width: 3.5rem;
+					height: 3.5rem;
+				}
+				[class^="ti-"], [class*=" ti-"] {
+					padding: 1rem;
+				}
+			}
+		}
+	}
+
+	.g-content-pro, .g-content-pro-slider, .g-content-pro-slideset {
+		.g-content-pro-item {
+			border: 0px;
+			.g-info-container {
+				color: $base-text-color;
+				background: $white;
+				margin-top: 1rem;
+				padding: 2rem;
+				border-radius: $core-border-radius;
+				
+				.g-article-date {
+					color: $accent-color-1;
+					padding: 0.875rem;
+					display: block;
+					margin-right: auto;
+					margin-left: auto;
+					margin-bottom: 1rem;
+					border: 1px solid $accent-color-1;
+					border-radius: $core-border-radius;
+					max-width: 200px;
+				}
+			}
+			.g-content-pro-image {
+				img {
+					border-radius: $core-border-radius;
+				}
+			}
+			.g-content-pro-special {
+				color: $accent-color-1;
+				font-style: initial;
+				text-align: center;
+				float: none;
+				border: 1px solid $accent-color-1;
+				border-radius: $core-border-radius;
+				padding: 0.675rem 1rem;
+				display: inline;
+			}
+			.g-content-pro-link {
+				text-align: center;
+				float: none;
+				font-style: initial;
+				margin-top: 1rem;
+			}
+		}
+		
+		.g-content-pro-title {
+			a {
+				color: $base-text-color;
+				&:hover {
+					color: $accent-color-1;
+				}
+			}
+		}
+		
+		.uk-overlay-background {
+			background: rgba(255,255,255,0) !important;
+		}
+		
+		.uk-overlay {
+			position: relative;
+		}
+		
+		.uk-overlay-icon::before {
+			color: $accent-color-1;
+			background: $white;
+			border-radius: 100%;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			top: 50%;
+			left: 50%;
+			margin-top: -50px;
+			margin-left: -50px;
+			position: absolute;
+		}
+		
+		.g-info-container-style2 {
+			&.uk-overlay-panel {
+				&.uk-overlay-background {
+					background: $accent-color-1 !important;
+					@include border-bottom-radius($core-border-radius);
+				}
+				a {
+					&:hover {
+						color: darken($accent-color-1, 40%);
+					}
+				}
+			}
+			.g-content-pro-special {
+				color: $white;
+				text-align: center;
+				float: none;
+				border: 1px solid $white;
+				border-radius: $core-border-radius;
+			}
+			.g-content-pro-link {
+				text-align: center;
+				float: none;
+				font-style: initial;
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	#g-to-top {
+		.style2 {
+			#g-totop-button {
+				&:hover {
+					background: $accent-color-1;
+					@include linear-gradient(to bottom, $accent-color-1, $accent-color-2);
+				}
+			}
+		}
+	}
+
+	.g-video-feature {
+		.g-video-feature-left {
+			text-align: left;
+		}
+		.g-video-feature-right {
+			text-align: right;
+		}
+	}
+
+	.g-animated-counter {
+		text-align: initial;
+		.g-particle-intro {
+			text-align: initial;
+			.g-title-separator,
+			.g-title-separator.no-intro-text {
+				margin-left: 0px;
+			}
+			.g-introtext {
+				width: 100%;
+			}
+		}
+	}
+
+	.g-feedback, .g-feedback-slider, .g-feedback-slideset {
+		&.style1 {
+			.g-feedback-text {
+				padding: 2.5rem;
+				background: $accent-color-1;
+				background-image: url("../../images/feedback.png");
+				background-position: right bottom;
+				background-repeat: no-repeat;
+				border-radius: 25px;
+				border: 1px solid $accent-color-1;
+				&:before {
+					border-top: 16px solid $accent-color-1;
+				}
+				&:after {
+					border-top: 15px solid $accent-color-1;
+				}
+				h3 {
+					margin-top: 1rem;
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+		
+		&.style2 {
+			text-align: initial;
+			
+			.g-feedback-separator {
+				font-size: 2.5rem;
+			}
+			.g-user-image {
+				img {
+					border-radius: 50%;
+					width: 100px;
+				}
+			}
+		}
+	}
+
+	.g-pricing-tables {
+		&.style1 {
+			.g-pricing-table-inner {
+				border-radius: $core-border-radius;
+			}
+			.g-table-price {
+				font-size: 3rem;
+				@include linear-gradient(to bottom, $accent-color-1, $accent-color-2);
+			}
+			.featured-table {
+				h4 {
+					font-size: $fontsizes-body-font-size*1.5;
+					line-height: initial;
+				}
+				ul {
+					box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+				}
+				.g-table-price {
+					background: darken($accent-color-1,35%);
+				}
+			}
+		}
+	}
+
+	.g-gallery {
+		&.style2 {
+			.gallery-item-buttons {
+				> a {
+					border: 0px solid transparent;
+					border-radius: $core-border-radius;
+					height: 50px;
+					width: 50px;
+					line-height: 50px;
+					font-size: 1.1rem;
+					color: $accent-color-1;
+					background: $white;
+					cursor: pointer;
+					&:hover {
+						background: $white;
+					}
+				}
+			}
+		}
+		
+		.uk-modal-dialog {
+			color: $white;
+			background: $accent-color-1 !important;
+		}
+	}
+
+	.g-our-team, .g-our-team-slider, .g-our-team-slideset {
+		.g-our-team-item {
+			border: 0px solid transparent;
+		}
+		.g-our-team-image {
+			img {
+				@include border-top-radius($core-border-radius);
+			}
+		}
+		.g-info-container {
+			color: $white;
+			background: $accent-color-1;
+			@include linear-gradient(to bottom, $accent-color-1, $accent-color-2);
+			@include border-bottom-radius($core-border-radius);
+			> h4 {
+				color: $white !important;
+			}
+		}
+		.g-our-team-name {
+			a {
+				color: $white;
+				&:hover {
+					color: darken($accent-color-1, 40%);
+				}
+			}
+		}
+	}
+
+	.g-accordion {
+		.g-accordion-item {
+			.uk-accordion-title {
+				background: $white;
+				padding: 1rem 1.5rem;
+				border-radius: $core-border-radius;
+				@include transition(all, 0.2s);
+				&:hover,
+				&.uk-active {
+					color: $white !important;
+					border: 1px solid $accent-color-1;
+					background: $accent-color-1;
+					@include linear-gradient(to bottom, $accent-color-1, $accent-color-2);
+				}
+			}
+		}
+	}
+
+	.g-buttons {	
+		.g-buttons-item {
+			border-radius: $core-border-radius;
+			border: 1px solid darken($white,5%);
+			background: $white;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+			
+			&.inverted-button {
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+
+	.g-page-title {
+		[class^="ti-"], [class*=" ti-"] {
+			font-size: 22px;
+		}
+	}
+
+	.g-features-particle {
+		.g-features-particle-icon {
+			color: $white;
+			background: $accent-color-1;
+			@include linear-gradient(to bottom, $accent-color-1, $accent-color-2);
+		}
+		.g-circle-border {
+			border: 2px solid transparent;
+		}
+		.g-features-particle-item {
+			&:hover {
+				.g-circle-border {
+					border: 2px solid $accent-color-1;
+				}
+			}
+		}
+	}
+
+	.g-features2-particle {
+		.g-features2-particle-icon {
+			width: 3.5rem;
+			height: 3.5rem;
+			line-height: 3.5rem;
+			text-align: center;
+			color: $white;
+			background: $accent-color-1;
+			@include linear-gradient(to bottom, $accent-color-1, $accent-color-2);
+			border-radius: $core-border-radius;
+		}
+		[class^="ti-"], [class*=" ti-"] {
+			padding: 0.875rem;
+		}
+	}
+
+	.g-onepage-menu {
+		ul {
+			border-radius: $core-border-radius;
+			
+			li {
+				a {
+					padding: 1.5rem;
+					text-transform: uppercase;
+					&:hover {
+						color: $white;
+						background: $accent-color-1;
+					}
+				}
+				&:first-child {
+					a {
+						@include border-top-radius($core-border-radius);
+					}
+				}
+				&:last-child {
+					a {
+						@include border-bottom-radius($core-border-radius);
+					}
+				}
+				&.uk-active {
+					> a {
+						color: $white;
+						background: $accent-color-1;
+					}
+				}
+			}
+			.submenu {
+				li {
+					a {
+						border-radius: 0;
+						padding: 1rem;
+						text-transform: initial;
+					}
+				}
+			}
+		}
+	}
+
+	.g-memories {
+		.g-memories-images {
+			.g-memories-image-container {
+				border-radius: $core-border-radius;
+				img {
+					border-radius: $core-border-radius;
+					width: 300px;
+					@include transition(transform 0.3s);
+					@include breakpoint(desktop-range)  {
+						width: 198px;
+					}
+					@include breakpoint(tablet-range) {
+						width: 175px;
+					}
+					@include breakpoint(mobile-only) {
+						width: 190px;
+					}
+				}
+				.uk-overlay {
+					border-radius: $core-border-radius;
+					&:hover {
+						img {
+							border-radius: $core-border-radius;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.g-cta-button {
+		&.style1 {
+			.g-cta-inner {
+				border-radius: $core-border-radius;
+				border: 1px solid darken($white,5%);
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+			}
+		}
+		&.style2 {
+			.g-cta-inner {
+				.g-cta-right {
+					.button {
+						color: $white;
+						background: $accent-color-1;
+						&:hover {
+							background: darken($accent-color-1,10%);
+							border-color: darken($accent-color-1,10%);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.g-image-features {
+		.g-image-features-item {
+			border-radius: $core-border-radius;
+		}
+		.g-image-features-image {
+			img {
+				@include border-left-radius($core-border-radius);
+				@include breakpoint(mobile-only) {
+					border-radius: $core-border-radius;
+				}
+			}
+			&.uk-overlay {
+				@include border-left-radius($core-border-radius);
+				@include breakpoint(mobile-only) {
+					border-radius: $core-border-radius;
+				}
+			}
+		}
+		.g-image-feature-special {
+			color: inherit;
+			font-style: initial;
+		}
+		.g-image-features-link {
+			font-style: initial;
+			a {
+				color: $base-text-color;
+				padding: 5px 10px;
+				border: 1px solid $base-text-color;
+				border-radius: $core-border-radius;
+				@include transition(all 0.3s);
+				&:hover {
+					color: $white;
+					border: 1px solid $accent-color-1;
+					background: $accent-color-1;
+				}
+			}
+		}
+	}
+
+	.g-companies, .g-companies-slider, .g-companies-slideset {
+		&.style1,
+		&.style2 {
+			.g-companies-image {
+				img {
+					background: transparent;
+					border-radius: $core-border-radius;
+				}
+			}
+		}
+		&.style1 {
+			.g-companies-image {
+				img {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+body {
+	// Offcanvas Toggle
+	.offcanvas-toggle-particle {
+		&.g-offcanvas-toggle {
+			color: $header-text-color;
+			&:hover {
+				color: $accent-color-1;
+			}
+		}
+	}
+}

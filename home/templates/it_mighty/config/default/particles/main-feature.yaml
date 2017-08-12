@@ -1,0 +1,18 @@
+enabled: '1'
+layout: right
+image: ''
+alt: ''
+imagebottom: 'yes'
+title: ''
+description: ''
+link: ''
+buttontext: ''
+buttonicon: ''
+target: _parent
+css:
+  class: ''
+  left: ''
+  right: ''
+extra: {  }
+extra_left: {  }
+extra_right: {  }

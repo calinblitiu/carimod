@@ -1,0 +1,118 @@
+.g-memories {
+	padding: 40px 0;
+	text-align: center;
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
+	.g-memories-left {
+		@include breakpoint(mobile-only) {
+			margin-bottom: 50px;
+		}
+		.g-content {
+			margin: 0 $content-margin 0 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	.g-memories-right {
+		.g-content {
+			margin: 0 0 0 $content-margin;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	.g-memories-title {
+		margin-top: -5px;
+		margin-bottom: 25px;
+		text-align: center;
+		position: relative;
+		&:after {
+			display: block;
+			content: '';
+			height: 4px;
+			border-radius: 4px;
+			background: $accent-color-1;
+			position: relative;
+			width: 50px;
+			margin: 25px auto;
+		}
+	}
+	.g-memories-link {
+		margin-top: 5px;
+		i {
+			margin-right: 10px;
+		}
+	}
+	.g-memories-desc {
+		i {
+			margin-right: 8px;
+		}
+	}
+	.image-block {
+		@include breakpoint(tablet-range) {
+			
+		}
+		@include breakpoint(mobile-only) {
+			
+		}
+	}
+	.g-memories-images {
+		.g-memories-image-container {
+			padding: 7px;
+			background: #ffffff;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.15);
+			position: relative;
+			display: inline-block;
+			.uk-overlay {
+				&:hover {
+					img {
+						@include transform(scale(1.15));
+					}
+				}
+			}
+			img {
+				width: 250px;
+				@include transition(transform 0.3s);
+				@include breakpoint(desktop-range)  {
+					width: 198px;
+				}
+				@include breakpoint(tablet-range) {
+					width: 175px;
+				}
+				@include breakpoint(mobile-only) {
+					width: 190px;
+				}
+			}
+			&.g-memories-image1 {
+				top: -20px;
+				z-index: 1;
+				@include transform(rotate(7deg));
+			}
+			&.g-memories-image2 {
+				left: -20px;
+				z-index: 2;
+				@include transform(rotate(-10deg));
+			}
+			&.g-memories-image3 {
+				left: 20px;
+				z-index: 3;
+				@include transform(rotate(-16deg));
+			}
+			&.g-memories-image4 {
+				top: 20px;
+				z-index: 4;
+				@include transform(rotate(13deg));
+			}
+			&.g-memories-image5 {
+				top: 20px;
+				z-index: 5;
+				display: none;
+			}
+			.uk-overlay-panel {
+				z-index: 4;
+			}
+		}
+		.g-memories-parallax {
+			display: inline-block;
+		}
+	}
+}

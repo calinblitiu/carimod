@@ -1,0 +1,11 @@
+enabled: '1'
+mainheading: ''
+introtext: ''
+itemsleft: {  }
+image: ''
+alt: ''
+imagebottom: 'yes'
+itemsright: {  }
+css:
+  class: ''
+extra: {  }

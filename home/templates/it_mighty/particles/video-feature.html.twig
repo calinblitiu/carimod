@@ -1,0 +1,67 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set attr_extra = '' %}
+{% if particle.extra %}
+    {% for attributes in particle.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% set attr_extra_left = '' %}
+{% if particle.extra_left %}
+    {% for attributes in particle.extra_left %}
+        {% for key, value in attributes %}
+            {% set attr_extra_left = attr_extra_left ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% set attr_extra_right = '' %}
+{% if particle.extra_right %}
+    {% for attributes in particle.extra_right %}
+        {% for key, value in attributes %}
+            {% set attr_extra_right = attr_extra_right ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% set textcontent %}
+    {% if particle.title %}<h3 class="g-video-feature-title">{{ particle.title|raw }}</h3>{% endif %}
+    {% if particle.description %}<div class="g-video-feature-desc">{{ particle.description|raw }}</div>{% endif %}
+    {% if particle.link %}<a class="button g-video-feature-link" href="{{ particle.link|e }}" target="{{ particle.target|default('_blank')|e }}">{% if particle.buttonicon %}<i class="{{ particle.buttonicon|e }}"></i>{% endif %}{{ particle.buttontext|raw }}</a>{% endif %}
+{% endset %}
+
+{% set videocontent %}
+    {% if particle.video %}{{ particle.video|raw }}{% endif %}
+{% endset %}
+
+{% block particle %}
+
+    <div class="g-video-feature{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+        {% if particle.mainheading or particle.introtext %}
+            <div class="g-particle-intro">
+                {% if particle.mainheading %}
+                    <h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+                    <div class="g-title-separator {% if particle.introtext == false %}no-intro-text{% endif %}"></div>
+                {% endif %} 
+                {% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+            </div>
+        {% endif %}
+        <div class="g-grid">
+            <div class="g-block g-video-feature-left{% if particle.css.left %} {{ particle.css.left|e }}{% endif %}{% if particle.layout|default('left')|e == 'left' %} video-block{% endif %}" {% if particle.extra_left %}{{ attr_extra_left|raw }}{% endif %}>
+                <div class="g-content">
+                    {% if particle.layout|default('left')|e == 'right' %}{{ textcontent }}{% endif %}
+                    {% if particle.layout|default('left')|e == 'left' %}{{ videocontent }}{% endif %}
+                </div>
+            </div>
+            <div class="g-block g-video-feature-right{% if particle.css.right %} {{ particle.css.right|e }}{% endif %}{% if particle.layout|default('left')|e == 'right' %} align-right video-block{% endif %}" {% if particle.extra_right %}{{ attr_extra_right|raw }}{% endif %}>
+                <div class="g-content">
+                    {% if particle.layout|default('left')|e == 'right' %}{{ videocontent }}{% endif %}
+                    {% if particle.layout|default('left')|e == 'left' %}{{ textcontent }}{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

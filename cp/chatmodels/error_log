@@ -1,0 +1,18 @@
+[29-Dec-2016 00:58:42 America/Chicago] PHP Parse error:  syntax error, unexpected 'IN' (T_STRING) in /home3/menmwen/public_html/settings.php on line 23
+[07-Jan-2017 15:00:22 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/menmwen/public_html/cp/chatmodels/updateprofile.php:23) in /home3/menmwen/public_html/cp/chatmodels/updateprofile.php on line 29
+[07-Jan-2017 15:00:22 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'menmwen'@'localhost' (using password: NO) in /home3/menmwen/public_html/cp/chatmodels/updateprofile.php on line 491
+[07-Jan-2017 15:00:22 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/menmwen/public_html/cp/chatmodels/updateprofile.php on line 491
+[07-Jan-2017 15:00:22 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/menmwen/public_html/cp/chatmodels/updateprofile.php on line 493
+[15-Jan-2017 22:00:14 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home3/menmwen/public_html/cp/chatmodels/showslist.php on line 167
+[15-Jan-2017 22:01:04 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home3/menmwen/public_html/cp/chatmodels/showslist.php on line 167
+[15-Jan-2017 22:01:05 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home3/menmwen/public_html/cp/chatmodels/showslist.php on line 167
+[17-Jan-2017 05:42:04 America/Chicago] PHP Warning:  getimagesize(): Filename cannot be empty in /home3/menmwen/public_html/cp/chatmodels/updateprofile.php on line 216
+[13-Feb-2017 10:31:24 America/Chicago] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, null given in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 21
+[13-Feb-2017 10:31:24 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'menmwen'@'localhost' (using password: NO) in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 24
+[13-Feb-2017 10:31:24 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 24
+[19-Feb-2017 22:36:08 America/Chicago] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, null given in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 21
+[19-Feb-2017 22:36:08 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'menmwen'@'localhost' (using password: NO) in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 24
+[19-Feb-2017 22:36:08 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 24
+[25-Apr-2017 23:20:31 America/Chicago] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, null given in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 21
+[25-Apr-2017 23:20:31 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'menmwen'@'localhost' (using password: NO) in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 24
+[25-Apr-2017 23:20:31 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/menmwen/public_html/cp/chatmodels/paymentop.php on line 24

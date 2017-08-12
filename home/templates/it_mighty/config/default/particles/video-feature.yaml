@@ -1,0 +1,18 @@
+enabled: '1'
+mainheading: ''
+introtext: ''
+layout: left
+video: ''
+title: ''
+description: ''
+link: ''
+buttontext: ''
+buttonicon: ''
+target: _parent
+css:
+  class: ''
+  left: ''
+  right: ''
+extra: {  }
+extra_left: {  }
+extra_right: {  }

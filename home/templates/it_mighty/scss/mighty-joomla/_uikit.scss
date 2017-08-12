@@ -1,0 +1,38 @@
+.uk-modal {
+	background: rgba(0,0,0,0.8) !important;
+}
+
+.uk-modal-dialog {
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+.uk-slidenav-position {
+	.uk-slidenav {
+		border-radius: 100%;
+	}
+	.uk-dotnav > * > * {
+		background: transparent;
+		border: 2px solid $accent-color-1;
+	}
+	.uk-dotnav > .uk-active > *,
+	.uk-dotnav > * > *:hover,
+	.uk-dotnav > * > *:focus {
+		background: $accent-color-1;
+	}
+}
+
+.uk-slidenav {
+	background: transparentize($accent-color-1, 0.5) !important;
+	&:hover {
+		background: $accent-color-1 !important;
+	}
+}
+
+.uk-overlay-background {
+	background: transparentize($accent-color-1, 0.5) !important;
+}
+
+.uk-text-primary {
+	color: $accent-color-1 !important;
+}
